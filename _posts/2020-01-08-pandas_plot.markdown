@@ -13,6 +13,28 @@ The histogram is a great tool that helps you visualize how the data is spread an
 Another great strategy to use with plots is to create a function that will handle some of the basic stuff to style the plot.  
 
 ```
-
+def style_func(x,y, plot_title, x_title, y_title, fig_size):
+    """
+    Input:
+    x: data for x axis
+    y: data for y axis
+    
+    plot_title: title for plot
+    
+    x_title: label for x axis
+    y_title: label for y_axis
+    
+    fig_size: tuple for figure size
+    """
+    
+    plt.figure(figsize=fig_size)
+    plt.scatter(x,y)
+    
+    plt.title(plot_title)
+    
+    plt.xlabel(x_title)
+    plt.ylabel(y_title)
+    
+    return(plt.show())
 
 ```
